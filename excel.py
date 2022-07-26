@@ -9,13 +9,15 @@ class ExcelHandle:
         bold = self.workbook.add_format({'bold': True})
 
         self.worksheet.set_column('A:L', 25)
-        self.worksheet.write('A1', 'First Names', bold)
-        self.worksheet.write('B1', 'Last Name', bold)
-        self.worksheet.write('C1', 'Address', bold)
-        self.worksheet.write('D1', 'Email', bold)
-        self.worksheet.write('E1', 'URL', bold)
-        self.worksheet.write('F1', 'Tel', bold)
-        self.worksheet.write('G1', 'Fax', bold)
+        self.worksheet.write('A1', 'First Name', bold)
+        self.worksheet.write('B1', 'Middle names ', bold)
+        self.worksheet.write('C1', 'Last Name', bold)
+        self.worksheet.write('D1', 'Company Name', bold)
+        self.worksheet.write('E1', 'Email', bold)
+        self.worksheet.write('F1', 'URL', bold)
+        self.worksheet.write('G1', 'Tel', bold)
+        self.worksheet.write('H1', 'Fax', bold)
+        self.worksheet.write('I1', 'Address', bold)
         
     
     def addRow(self, data):

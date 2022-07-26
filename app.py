@@ -78,7 +78,7 @@ while True:
 
 
     def scrapePage(count, resAmount):
-        sleep(0.5)
+        sleep(1)
         # gets all items in list
         # element = WebDriverWait(driver, 20).until(EC.((By.CLASS_NAME, "listItem")))
         results = driver.find_elements(By.CLASS_NAME, "listItem")
@@ -90,12 +90,12 @@ while True:
             except:
                 pass
 
-        # sleep(0.5)
+        sleep(0.5)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "vcard")))    
         # gets extra results from opened items in list
         if (len(results) < 10):
             sleep(1)
-        # sleep(0.5)
+        sleep(0.5)
         results = driver.find_elements(By.CLASS_NAME, "vcard")
         
         last = ''
@@ -110,7 +110,7 @@ while True:
             
             # os.system('CLS')
             print(f'{count} of {resAmount}')
-
+        print('Page Scanned')
         return count, resAmount 
 
 
